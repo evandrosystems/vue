@@ -4,25 +4,25 @@ Este repositório fornece uma estrutura Docker com Docker Compose otimizada para
 
 #### Como usar?
 
-##### 1º Criando o .env
+#### 1º Criando o .env
 Copie o arquivo __".env-example"__ e crie outro chamado __".env"__ </br>
 ```
 cp .env-example .env
 ```
 
-##### 2º Criando a imagem
+#### 2º Criando a imagem
 ```
 docker compose build --no-cache
 ```
 
-##### 3º Criando o container
+#### 3º Criando o container
 Fique atento ao nome do serviço no docker-compose.yml </br>
 Nesse repositório se chama __"vue"__
 ```
 docker compose run --rm -it vue bash
 ```
 
-##### 4º Criando o projeto vue cli
+#### 4º Criando o projeto vue cli
 No passo anterior você criou e entrou dentro do container. </br>
 Estando dentro do container com o passo anterior, agora vamos criar um projeto vue cli. </br>
 ```
@@ -32,7 +32,7 @@ create vue . --no-git
 - Espere o projeto ser criado e transferido para o volume
 - Depois para sair do container execute __"exit"__
 
-##### 5º Dê permissões (Linux)
+#### 5º Dê permissões (Linux)
 Se você usa linux talvez precise aplicar permissões a tudo que é criado dentro do container, </br>
 forneça seu usuário e grupo para aplicar permissões ou use outra maneira
 ```
@@ -41,7 +41,7 @@ sudo chown -R user:group .
 Agora você pode acessar seu aplicativo vue cli, pelo navegador </br>
 use a porta configurada no .env que por padrão é "8000"
 
-##### 6º Executando o projeto
+#### 6º Executando o projeto
 Depois de todos os passos anteriores, agora vamos -</br>
 executar o projeto no navegador
 ```
