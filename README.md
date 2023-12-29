@@ -30,20 +30,10 @@ create vue . --no-git
 ```
 - Siga os passos e configure seu projeto com a versão que deseja do vue cli.
 - Espere o projeto ser criado e transferido para o volume
-- Depois para sair do container execute __"exit"__
+- Agora você precisa sair do container, use o comando __"exit"__
 
-#### 5º Dê permissões (Linux)
-Se você usa linux talvez precise aplicar permissões a tudo que é criado dentro do container, </br>
-forneça seu usuário e grupo para aplicar permissões ou use outra maneira
-```
-sudo chown -R user:group .
-```
-Agora você pode acessar seu aplicativo vue cli, pelo navegador </br>
-use a porta configurada no .env que por padrão é "8000"
 
-#### 6º Executando o projeto
-Depois de todos os passos anteriores, agora vamos -</br>
-executar o projeto no navegador
+#### 5º Executando o projeto
 ```
 docker compose up -d
 ```
