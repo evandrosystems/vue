@@ -1,0 +1,19 @@
+version: "3.8"
+
+networks:
+  net:
+
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: ./docker/vue/Dockerfile
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    ports:
+      - "${PORT_HOST}:8080"
+    container_name: vue
+    image: vue:latest
+    command: ["npm", "run", "serve"]
