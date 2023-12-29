@@ -10,7 +10,7 @@ services:
     env_file:
       - .env
     ports:
-      - "${PORT}:${PORT}"
+      - "${PORT_CONTAINER_VUE}:${PORT_CONTAINER_VUE}"
     container_name: vue
     image: vue:latest
     command: ["npm", "run", "serve"]
