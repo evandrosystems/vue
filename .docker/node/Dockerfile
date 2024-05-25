@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:20
 
 # install vue cli
 RUN npm install -g @vue/cli

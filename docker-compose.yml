@@ -1,16 +1,19 @@
 version: "3.8"
 
 services:
+
+  # only for production - docker compose up -d
   vue:
     build:
       context: .
       dockerfile: ./.docker/node/Dockerfile
+    container_name: vue_container_name
+    image: vue_image_name
     volumes:
       - .:/app
     env_file:
       - .env
     ports:
-      - "${PORT_CONTAINER_VUE}:${PORT_CONTAINER_VUE}"
-    container_name: vue
-    image: vue:latest
-    command: ["npm", "run", "serve"]
+      - "${PORT_CONTAINER_VUE}:80"
+    # command: ["npm", "run", "serve"]
+    # restart: always
